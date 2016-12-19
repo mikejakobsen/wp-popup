@@ -1077,9 +1077,9 @@ div#knapper div a {
   div#knapper div a i {
     color: #fff; }
   div#knapper div a#ring_nu {
-    background: yellow; }
+    background: #cad2c5; }
   div#knapper div a#find_vej {
-    background: pink; }
+    background: #84a98c; }
 
 @media only screen and (max-width: 300px) {
   div#knapper div a span.text {

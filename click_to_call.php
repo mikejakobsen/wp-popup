@@ -28,13 +28,13 @@ function ClickToCall_create_options_page()
 function ClickToCall_lets_get_this_party_started()
 {
     register_setting('sitename_custom_options-group', 'ClickToCall_options');
-    wp_register_style('jquery-ui.css', plugins_url('/dist/jquery-ui.min.css', __FILE__));
+    wp_register_style('jquery-ui.css', plugins_url('dist/jquery-ui.min.css', __FILE__));
 
-    wp_register_style('font-awesome.css', plugins_url('/dist/font-awesome.min.css', __FILE__));
-    wp_register_style('bootstrap.min.css', plugins_url('/dist/css/bootstrap.min.css', __FILE__));
-    wp_register_script('bootstrap.js', plugins_url('/dist/js/bootstrap.min.js', __FILE__));
-    wp_register_style('spectrum.css', plugins_url('/dist/spectrum.css', __FILE__));
-    wp_register_script('spectrum.js', plugins_url('/dist/spectrum.js', __FILE__));
+    wp_register_style('font-awesome.css', plugins_url('dist/font-awesome.min.css', __FILE__));
+    wp_register_style('bootstrap.min.css', plugins_url('dist/bootstrap.min.css', __FILE__));
+    wp_register_script('bootstrap.js', plugins_url('dist/bootstrap.min.js', __FILE__));
+    wp_register_style('spectrum.css', plugins_url('dist/spectrum.css', __FILE__));
+    wp_register_script('spectrum.js', plugins_url('dist/spectrum.js', __FILE__));
 
     // Call Scripts
     wp_enqueue_style('font-awesome.css');
@@ -60,8 +60,8 @@ function ClickToCall_options_page()
     $mobile_size_min = 0;
     $mobile_size_max = 2000;
     $bg_color_default = '#ffffff';
-    $callbutton_color_default = '#0c3';
-    $mapbutton_color_default ='#fc3';
+    $callbutton_color_default = '#84A98C';
+    $mapbutton_color_default ='#CAD2C5';
 
 
     if (isset($_GET['page']) && $_GET['page'] == 'indstillinger') {
