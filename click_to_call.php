@@ -4,7 +4,7 @@
   Plugin URI: https://github.com/mikejakobsen/wp-popup
   Description:
   Author: Hoeks
-  Version: 0.0.1
+  Version: 1.0.1
   Author URI: http://mikejakobsen.com
  */
 
@@ -28,13 +28,13 @@ function ClickToCall_create_options_page()
 function ClickToCall_lets_get_this_party_started()
 {
   register_setting('sitename_custom_options-group', 'ClickToCall_options');
-  wp_register_style('jquery-ui.css', plugins_url('bower_components/jquery-ui/themes/base/jquery-ui.min.css', __FILE__));
+  wp_register_style('jquery-ui.css', plugins_url('dist/jquery-ui.min.css', __FILE__));
 
-  wp_register_style('font-awesome.css', plugins_url('bower_components/font-awesome/css/font-awesome.css', __FILE__));
-  wp_register_style('bootstrap.min.css', plugins_url('bower_components/bootstrap/dist/css/bootstrap.min.css', __FILE__));
-  wp_register_script('bootstrap.js', plugins_url('bower_components/bootstrap/dist/js/bootstrap.min.js', __FILE__));
-  wp_register_style('spectrum.css', plugins_url('bower_components/spectrum/spectrum.css', __FILE__));
-  wp_register_script('spectrum.js', plugins_url('bower_components/spectrum/spectrum.js', __FILE__));
+  wp_register_style('font-awesome.css', plugins_url('dist/font-awesome.css', __FILE__));
+  wp_register_style('bootstrap.min.css', plugins_url('dist/bootstrap.min.css', __FILE__));
+  wp_register_script('bootstrap.js', plugins_url('dist/bootstrap.min.js', __FILE__));
+  wp_register_style('spectrum.css', plugins_url('dist/spectrum.css', __FILE__));
+  wp_register_script('spectrum.js', plugins_url('dist/spectrum.js', __FILE__));
 
   // Call Scripts
   wp_enqueue_style('font-awesome.css');
@@ -167,6 +167,10 @@ change: function(color) {
           <div class="row">
             <div class="col-xs-12">
               <h1 style="text-shadow: 2px 2px 0 white, 3px 3px 0 #ddd; padding: 30px 0;">Click To Call</h1>
+              <p>Ryddes adresse felterne, vises kun "Ring nu". Fjernes Tlf vises kun "Find vej".</p>
+              <p>Breakpoint definer hvilken opløsning pluginet aktiveres ved.</p>
+              <p>Repo: https://github.com/mikejakobsen/wp-popup</p>
+              <p>Backlog: https://github.com/mikejakobsen/wp-popup/blob/master/Todo.md</p>
             </div>
             <form method="post" action="options.php" >
 <?php
