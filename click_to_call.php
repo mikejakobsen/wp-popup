@@ -232,13 +232,14 @@ function ClickToCall_options_page()
                     <div class="form-group row">
                       <label class="col-xs-2 col-form-label" for="ClickToCall_options[fadeIn]">Fade in tid:</label>
                       <div class="col-xs-10">
-                        <input class="form-control" type="text" id="callbutton_text" name="ClickToCall_options[fadeIn]" value="<?php echo (empty($ClickToCall_options['fadeIn'])?'Tid i sekunder':$ClickToCall_options['fadeIn']); ?>" placeholder="Tid i sekunder" />
+                        <input class="form-control" type="text" id="callbutton_time" name="ClickToCall_options[fadeIn]" value="<?php echo (empty($ClickToCall_options['fadeIn'])?'Tid i sekunder':$ClickToCall_options['fadeIn']); ?>" placeholder="Tid i sekunder" />
                       </div>
                     </div>
                     <div class="form-group row">
                       <label class="col-xs-2 col-form-label" for="ClickToCall_options[animation]">Vælg animation</label>
                       <div class="col-xs-10">
-                        <input class="form-control" type="text" id="callbutton_text" name="ClickToCall_options[animation]" value="<?php echo (empty($ClickToCall_options['animation'])?'Animation':$ClickToCall_options['animation']); ?>" placeholder="Animation" />
+                        <input class="form-control" type="text" id="callbutton_animation" name="ClickToCall_options[animation]" value="<?php echo (empty($ClickToCall_options['animation'])?'Animation':$ClickToCall_options['animation']); ?>" placeholder="Animation" />
+                        <p>https://daneden.github.io/animate.css/</p>
                       </div>
                     </div>
                     <input type="submit" class="btn btn-secondary" value="Gem" />

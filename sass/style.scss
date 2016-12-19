@@ -1,4 +1,4 @@
-import 'animation';
+@import 'animations';
 
 div {
   &#knapper_div {
@@ -50,6 +50,9 @@ div {
       margin: 0 10px;
       text-align: center;
       box-sizing: content-box;
+      i {
+        color: #fff;
+      }
       // Gets overriden anyway
       &#ring_nu {
         background: yellow;

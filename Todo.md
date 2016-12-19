@@ -18,6 +18,6 @@ On Localhost - How do i test the mobile check? Add viewport config?
 
 ### Feature request
 
-- [ ] JS: Show after.. 5, 10 sec?
+- [x] JS: Show after.. 5, 10 sec?
 - [ ] PHP: Choose layout
 - [ ] HTML: Choose font-awesome icon [Maybe?](https://github.com/itsjavi/fontawesome-iconpicker)
