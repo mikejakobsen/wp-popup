@@ -1,0 +1,67 @@
+div {
+  &#knapper_div {
+    display: none;
+  }
+  &#knapper {
+    display: none;
+    z-index: 9999;
+    clear: both;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1a1919;
+    overflow: hidden;
+    padding: 10px 0;
+  }
+  &.btn__1 div {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    float: left;
+  }
+  &.btn__2 div {
+    margin: 0;
+    width: 50%;
+    padding: 0;
+    float: left;
+  }
+  &#knapper div {
+    &:first-child {
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-left: 0;
+    }
+    a {
+      color: #fff;
+      display: block;
+      padding: 10px;
+      border-radius: 60px;
+      height: 14px;
+      line-height: 14px;
+      font-size: 14px;
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: normal;
+      margin: 0 10px;
+      text-align: center;
+      box-sizing: content-box;
+      // Gets overriden anyway
+      &#ring_nu {
+        background: yellow;
+      }
+      // Gets overriden anyway
+      &#find_vej {
+        background: pink;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  div#knapper div a span.text {
+    display: none;
+  }
+}

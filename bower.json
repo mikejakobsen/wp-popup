@@ -1,0 +1,24 @@
+{
+  "name": "click-to-call",
+  "authors": [
+    "Mike Jakobsen <mike@jakobsen.dk>"
+  ],
+  "description": "Click To Call WP plugin",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-ui": "^1.12.1",
+    "spectrum": "^1.8.0",
+    "bootstrap": "4.0",
+    "font-awesome": "^4.7.0"
+  }
+}

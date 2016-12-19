@@ -22,3 +22,12 @@ Icon
 
 # Vim undo history
 .un~
+
+# Node modules
+node_modules
+
+# Bower
+bower_components
+
+# Dist
+dist
