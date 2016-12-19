@@ -14,6 +14,9 @@ npm install
 bower install
 
 Gulp
+
+wp plugin activate Click-to-call
+
 ```
 
 ### Task

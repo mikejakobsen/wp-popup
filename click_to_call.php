@@ -1,6 +1,6 @@
 <?php
 /*
-  Plugin Name: Click To Call
+  Plugin Name: ClickToCall
   Plugin URI: http://mikejakobsen.com
   Description:
   Author: Hoeks
