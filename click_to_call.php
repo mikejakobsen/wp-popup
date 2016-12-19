@@ -147,7 +147,7 @@ function ClickToCall_options_page()
         <div class='container'>
           <div class="row">
             <div class="col-xs-12">
-              <h1>Click To Call</h1>
+              <h1 style="text-shadow: 2px 2px 0 white, 3px 3px 0 #ddd; padding: 30px 0;">Click To Call</h1>
             </div>
             <form method="post" action="options.php" >
                 <?php
@@ -158,17 +158,18 @@ function ClickToCall_options_page()
                 <input type="hidden" name="page_options" value="ClickToCall_options" />
 
                     <div class="form-group">
-                        <label class="col-xs-2 col-form-label" for="ClickToCall_options[phone]">Tlf:</label>
-                        <div class="col-xs-10">
-                        <input class="form-control" name="ClickToCall_options[phone]" value='<?php
+                        <div class="form-group row">
+                          <label class="col-xs-2 col-form-label" for="ClickToCall_options[phone]">Tlf:</label>
+                          <div class="col-xs-10">
+                          <input class="form-control" name="ClickToCall_options[phone]" value='<?php
                     $ClickToCall_options['phone'] = str_replace(
                       array('+',' ','(',')','.'),
                       array('','','','-','-'),
                       $ClickToCall_options['phone']
                     );
                     echo $ClickToCall_options['phone']; ?>' />
+                        </div>
                       </div>
-                    </div>
                     </div>
                     <div class="form-group row">
                       <label class="col-xs-2 col-form-label" for="ClickToCall_options[gade]">Gade:</label>
@@ -189,7 +190,7 @@ function ClickToCall_options_page()
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label class="col-xs-2 col-form-label" for="ClickToCall_options[mobile_size]">Breakpoint:</label>
+                      <label class="col-xs-2 col-form-label" for="ClickToCall_options[mobile_size]">Breakpoint (px):</label>
                       <div class="col-xs-10">
                         <input class="form-control" type="number" id="mobilSize" name="ClickToCall_options[mobile_size]" value='<?php echo $ClickToCall_options['mobile_size']; ?>' min=<?php echo $mobile_size_min; ?> max=<?php echo $mobile_size_max; ?>/>
                         <div class="mx-auto" id="slider"></div>
@@ -222,10 +223,22 @@ function ClickToCall_options_page()
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label class="col-xs-2 col-form-label">Baggrund farve</label>
+                      <label class="col-xs-2 col-form-label">Baggrunds farve</label>
                       <div class="col-xs-10">
                         <input class="form-control" type='text' id="background_color_picker"  />
                         <input hidden="true" type="text" id="background_color" value='<?php echo $ClickToCall_options['bg_color']; ?>' name="ClickToCall_options[bg_color]" />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-xs-2 col-form-label" for="ClickToCall_options[fadeIn]">Fade in tid:</label>
+                      <div class="col-xs-10">
+                        <input class="form-control" type="text" id="callbutton_text" name="ClickToCall_options[fadeIn]" value="<?php echo (empty($ClickToCall_options['fadeIn'])?'Tid i sekunder':$ClickToCall_options['fadeIn']); ?>" placeholder="Tid i sekunder" />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-xs-2 col-form-label" for="ClickToCall_options[animation]">Vælg animation</label>
+                      <div class="col-xs-10">
+                        <input class="form-control" type="text" id="callbutton_text" name="ClickToCall_options[animation]" value="<?php echo (empty($ClickToCall_options['animation'])?'Animation':$ClickToCall_options['animation']); ?>" placeholder="Animation" />
                       </div>
                     </div>
                     <input type="submit" class="btn btn-secondary" value="Gem" />
@@ -286,6 +299,8 @@ function ClickToCall_add_mobile_size()
     $ClickToCall_options = get_option('ClickToCall_options');
     $mobile_size = $ClickToCall_options['mobile_size'];
     $background_color = $ClickToCall_options['bg_color'];
+    $fadeIn_time = $ClickToCall_options['fadeIn'];
+    $animation = $ClickToCall_options['animation'];
     $callbutton_color = $ClickToCall_options['call_color'];
     $mapbutton_color = $ClickToCall_options['map_color'];
 
@@ -295,6 +310,7 @@ function ClickToCall_add_mobile_size()
 
 	div#knapper {
         background: {$background_color};
+        animation: {$animation} {$fadeIn_time}s;
     }
 
     div#knapper div a#ring_nu {

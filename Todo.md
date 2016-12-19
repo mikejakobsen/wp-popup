@@ -2,6 +2,7 @@
 - [ ] JS: Show popup
 - [x] HTML: Inline styling the template
 - [x] WP-core: Add plugin entry in the backend
+- [x] PHP: Add ability to choose predefined viewports Ipad/Iphone etc.
 
 ### Thoughts
 
